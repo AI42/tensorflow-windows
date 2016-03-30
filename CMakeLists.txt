@@ -4,8 +4,15 @@
 
 project(PROJECT_TENSORFLOW)
 
+if(NOT MSVC)
+	set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+endif()
+
+# -----------------------------------------------------------------------------
+# 3rdparty
+
 # engen3
-include(${PROJECT_SOURCE_DIR}/3rdparty/eigen3/eigen3.cmake)
+include(${CMAKE_SOURCE_DIR}/3rdparty/eigen3/eigen3.cmake)
 
 # zlib
 add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/zlib)
@@ -19,6 +26,11 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/jpeg)
 # Protobuf
 add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/protobuf)
 
+# -----------------------------------------------------------------------------
+# tensorflow
 
 # tensorflow
-#add_subdirectory(${CMAKE_SOURCE_DIR}/tensorflow)
+add_subdirectory(${CMAKE_SOURCE_DIR}/tensorflow)
+
+# -----------------------------------------------------------------------------
+# END
