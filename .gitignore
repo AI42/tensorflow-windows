@@ -1,0 +1,10 @@
+/zz_build_*
+/lib
+/bin
+
+*.exe
+*.dll
+*.lib
+
+*.a
+*.dylib
