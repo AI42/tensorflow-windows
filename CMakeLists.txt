@@ -4,8 +4,18 @@
 
 project(PROJECT_TENSORFLOW)
 
-# tensorflow
-#add_subdirectory(${CMAKE_SOURCE_DIR}/tensorflow)
+# engen3
+include(${PROJECT_SOURCE_DIR}/3rdparty/eigen3/eigen3.cmake)
+
+# zlib
+add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/zlib)
+
+# png
+add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/png)
 
 # Protobuf
 add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/protobuf)
+
+
+# tensorflow
+#add_subdirectory(${CMAKE_SOURCE_DIR}/tensorflow)
