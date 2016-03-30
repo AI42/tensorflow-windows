@@ -13,6 +13,9 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/zlib)
 # png
 add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/png)
 
+# jpeg
+add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/jpeg)
+
 # Protobuf
 add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/protobuf)
 
